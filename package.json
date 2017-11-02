@@ -1,0 +1,8 @@
+{
+    "name": "truffle-box-macroverse-project",
+    "version": "0.0.1",
+    "descrioption": "Change this placeholder package information!",
+    "dependencies": {
+        "macroverse": "1.2.0"
+    }
+}
