@@ -3,6 +3,6 @@
     "version": "0.0.1",
     "descrioption": "Change this placeholder package information!",
     "dependencies": {
-        "macroverse": "macroverse@2.0.0-alpha.0"
+        "macroverse": "macroverse@next"
     }
 }
