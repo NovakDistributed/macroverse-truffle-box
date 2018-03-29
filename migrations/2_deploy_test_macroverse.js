@@ -1,10 +1,11 @@
 // Deploy a testing copy of Macroverse if one is needed.
-var RealMath = artifacts.require("macroverse/contracts/RealMath.sol")
-var RNG = artifacts.require("macroverse/contracts/RNG.sol")
-var MacroverseStarGenerator = artifacts.require("macroverse/contracts/MacroverseStarGenerator.sol")
-var MacroverseStarRegistry = artifacts.require("macroverse/contracts/MacroverseStarRegistry.sol")
-var MinimumBalanceAccessControl = artifacts.require("macroverse/contracts/MinimumBalanceAccessControl.sol")
-var MRVToken = artifacts.require("macroverse/contracts/MRVToken.sol")
+// We can only see the artifacts from our dependencies thanks to scripts/install.js copying them over.
+var RealMath = artifacts.require("RealMath")
+var RNG = artifacts.require("RNG")
+var MacroverseStarGenerator = artifacts.require("MacroverseStarGenerator")
+var MacroverseStarRegistry = artifacts.require("MacroverseStarRegistry")
+var MinimumBalanceAccessControl = artifacts.require("MinimumBalanceAccessControl")
+var MRVToken = artifacts.require("MRVToken")
 
 module.exports = function(deployer, network, accounts) {
   
@@ -32,8 +33,7 @@ module.exports = function(deployer, network, accounts) {
       console.log("MacroverseStarGenerator is at " + MacroverseStarGenerator.address)
     })
   } else {
-    console.log("On main network; using real Macroverse")
-    throw new Error("Main net deployment not yet implemented")
-    // TODO: Hack addresses we get from require("macroverse/build/contracts/*.json") into the appropriate Truffle artifacts
+    console.log("On main network; using real Macroverse")    
   }
 }
+

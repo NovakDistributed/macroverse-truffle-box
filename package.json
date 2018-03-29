@@ -3,6 +3,10 @@
     "version": "0.0.1",
     "descrioption": "Change this placeholder package information!",
     "dependencies": {
-        "macroverse": "2.0.0-alpha.1"
+        "macroverse": "2.0.0-alpha.1",
+        "shelljs": "^0.8.1"
+    },
+    "scripts": {
+        "install": "node scripts/install.js"
     }
 }
