@@ -25,7 +25,7 @@ module.exports = function(deployer, network, accounts) {
     deployer.deploy(MRVToken, accounts[0], accounts[0]).then(function() {
       return deployer.deploy(MinimumBalanceAccessControl, MRVToken.address, web3.toWei(100, "ether"))
     }).then(function() {
-      return deployer.deploy(MacroverseStarGenerator, "TestSeed", MinimumBalanceAccessControl.address)
+      return deployer.deploy(MacroverseStarGenerator, "FiatBlocks", MinimumBalanceAccessControl.address)
     }).then(function() {
       return deployer.deploy(MacroverseStarRegistry, MRVToken.address, web3.toWei(1000, "ether"))
     }).then(function() {
