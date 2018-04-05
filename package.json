@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "Change this placeholder package information!",
     "dependencies": {
-        "macroverse": "2.0.0-alpha.1",
+        "macroverse": "2.0.0-alpha.2",
         "shelljs": "^0.8.1"
     },
     "scripts": {
