@@ -23,7 +23,8 @@ for (let filename of fs.readdirSync(macroverseBuildDir)) {
 
   // Copy it across unconditionally.
   // Note that this can clobber your testnet deploy addresses if you reinstall.
-  fs.copyFileSync(src, dst)
+  // We would use fs.copyFileSync but that was added in node 8.5 and Ubuntu ships 6.11
+  fs.createReadStream(src).pipe(fs.createWriteStream(dst))
 }
 
 // Now we just hope this script is parsed even if the migration has run.
